@@ -87,6 +87,9 @@ Proyek ini menggunakan **MobileNetV2**, arsitektur CNN yang ringan dan efisien u
 | Recall | 1.00 |
 | F1-Score | 1.00 |
 
+| Test Accuracy : 0.9990 |
+| Test Loss : 0.1658 |
+
 *Update sesuai hasil training*
 
 ## 📚 Requirements
