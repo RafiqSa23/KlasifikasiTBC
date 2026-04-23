@@ -1,0 +1,90 @@
+.upload-container {
+  margin-bottom: 20px;
+}
+
+.dropzone {
+  border: 3px dashed #ddd;
+  border-radius: 15px;
+  padding: 50px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dropzone:hover,
+.dropzone.active {
+  border-color: #667eea;
+  background: #f8f9ff;
+}
+
+.dropzone.error {
+  border-color: #ef4444;
+  background: #fee;
+}
+
+.upload-icon {
+  font-size: 64px;
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.dropzone h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.dropzone p {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.upload-error {
+  color: #ef4444;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.preview-container {
+  text-align: center;
+}
+
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.preview-header h4 {
+  color: #333;
+  font-weight: 600;
+}
+
+.btn-reset {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #666;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.btn-reset:hover {
+  background: #fee;
+  border-color: #c33;
+  color: #c33;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
