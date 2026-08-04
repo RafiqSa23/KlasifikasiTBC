@@ -31,7 +31,7 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # Load model
 print("Loading model...")
-model_path = os.getenv('MODEL_PATH', 'model/mobilenetv2_tb_final.h5')
+model_path = os.getenv('MODEL_PATH', 'model/best_model_fold_3.h5')
 model = load_model(model_path)
 print("✅ Model loaded successfully!")
 # Load class indices
@@ -45,14 +45,17 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 
-def preprocess_image(image_path, target_size=(224, 224)):
+def preprocess_image(image_path, target_size=(224, 224), clip_limit=2.0, grid_size=(8,8)):
     """Preprocessing gambar untuk prediksi"""
     img = cv2.imread(image_path)
     if img is None:
         return None
-    
-    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-    img_resized = cv2.resize(img_rgb, target_size)
+    ## Penambahan CLAHE untuk meningkatkan kontras
+    gray= cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    clahe = cv2.createCLAHE(clipLimit=clip_limit, tileGridSize=grid_size)
+    enchanced_img = clahe.apply(gray)
+    enhanced_img_bgr = cv2.cvtColor(enchanced_img, cv2.COLOR_GRAY2BGR)
+    img_resized = cv2.resize(enhanced_img_bgr, target_size)
     img_normalized = img_resized / 255.0
     img_batch = np.expand_dims(img_normalized, axis=0)
     

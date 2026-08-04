@@ -2,46 +2,51 @@ import { ExternalLink, BookOpen, Calendar, Users } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const journals = [
-  {
-    title: "MobileNetV2: Inverted Residuals and Linear Bottlenecks",
-    authors: "Sandler, M., Howard, A., Zhu, M., et al.",
-    year: "2018",
-    source: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
-    doi: "https://doi.org/10.1109/CVPR.2018.00474",
-    summary: "Memperkenalkan arsitektur MobileNetV2 dengan inverted residuals dan linear bottlenecks yang menjadi dasar model klasifikasi ringan.",
+   {
+    title: "Enhancing Tuberculosis Detection from Chest X-Ray Images Using Deep Learning: Evaluating Multi-Architecture Performance and Efficiency",
+    authors: "Witarsyah, D., et al.",
+    year: "2026",
+    source: "Engineering, Technology & Applied Science Research (ETASR)",
+    doi: "https://doi.org/10.48084/etasr.16321",
+    summary:
+      "Penelitian membandingkan beberapa arsitektur deep learning untuk mendeteksi tuberkulosis dari citra Chest X-Ray dengan fokus pada performa dan efisiensi model."
   },
   {
-    title: "Deep Learning for Chest Radiograph Diagnosis: A Retrospective Analysis",
-    authors: "Rajpurkar, P., Irvin, J., Ball, R. L., et al.",
-    year: "2018",
-    source: "PLOS Medicine",
-    doi: "https://doi.org/10.1371/journal.pmed.1002686",
-    summary: "Studi retrospektif tentang penggunaan deep learning untuk diagnosis penyakit pada citra X-ray dada dengan performa setara radiologis.",
-  },
-  {
-    title: "Tuberculosis Detection from Chest X-rays Using Deep Transfer Learning",
-    authors: "Rahman, T., Khandakar, A., Kadir, M. A., et al.",
+    title: "Reliable Tuberculosis Detection Using Chest X-Ray With Deep Learning Segmentation and Visualization",
+    authors: "Rahman T., et al.",
     year: "2020",
-    source: "IEEE Access",
-    doi: "https://doi.org/10.1109/ACCESS.2020.3010287",
-    summary: "Menerapkan transfer learning dengan berbagai arsitektur CNN termasuk MobileNet untuk deteksi TBC pada citra X-ray dada.",
+    source: "IEEE Xplore",
+    doi: "https://doi.org/10.1109/ACCESS.2020.3031384",
+    summary:
+      "Mengembangkan metode deteksi tuberkulosis menggunakan segmentasi citra dan visualisasi untuk meningkatkan interpretasi hasil klasifikasi."
   },
   {
-    title: "A Systematic Review of Transfer Learning for Medical Image Classification",
-    authors: "Morid, M. A., Borjali, A., & Del Fiol, G.",
-    year: "2021",
-    source: "Computers in Biology and Medicine",
-    doi: "https://doi.org/10.1016/j.compbiomed.2021.104115",
-    summary: "Tinjauan sistematis tentang efektivitas transfer learning dalam klasifikasi citra medis termasuk deteksi penyakit paru.",
+    title: "Improving Early Detection and Classification of Lung Diseases With Innovative MobileNetV2 Framework",
+    authors: "Tripathi, A., et al.",
+    year: "2024",
+    source: "IEEE Xplore",
+    doi: "https://doi.org/10.1109/ACCESS.2024.3440577",
+    summary:
+      "Mengusulkan framework berbasis MobileNetV2 untuk meningkatkan akurasi deteksi dini penyakit paru, termasuk tuberkulosis."
   },
   {
-    title: "Automated Tuberculosis Screening Using Deep Learning on Chest X-Ray Images",
-    authors: "Lakhani, P., & Sundaram, B.",
-    year: "2017",
-    source: "Radiology",
-    doi: "https://doi.org/10.1148/radiol.2017162326",
-    summary: "Salah satu studi awal yang menunjukkan kemampuan deep learning dalam mendeteksi TBC pada citra radiografi dada.",
-  },
+  title: "Deep Learning Classification of Active Tuberculosis Lung Zones Wise Manifestations Using Chest X-Rays: A Multi Label Approach",
+  authors: "Devasia, J., Goswami, H., Lakshminarayanan, S., et al.",
+  year: "2023",
+  source: "Scientific Reports (Nature) - Open Access",
+  doi: "https://doi.org/10.1038/s41598-023-28079-0",
+  summary:
+    "Mengembangkan model deep learning untuk mengidentifikasi manifestasi tuberkulosis aktif pada berbagai zona paru menggunakan citra Chest X-Ray. Penelitian menunjukkan bahwa pendekatan deep learning mampu membantu proses skrining TB secara otomatis dengan performa yang tinggi."
+},
+{
+  title: "A Deep Learning Model Using Chest X-Ray for Identifying TB and NTM-LD Patients: A Cross-Sectional Study",
+  authors: "Lee, H., et al.",
+  year: "2023",
+  source: "Insights into Imaging",
+  doi: "https://doi.org/10.1186/s13244-023-01395-9",
+  summary:
+    "Mengembangkan model deep learning untuk membedakan pasien Tuberkulosis (TB) dan Non-Tuberculous Mycobacterial Lung Disease (NTM-LD) menggunakan citra Chest X-Ray. Hasil penelitian menunjukkan bahwa model AI mampu meningkatkan akurasi identifikasi penyakit paru yang memiliki karakteristik radiologi serupa."
+}
 ];
 
 const JournalSection = () => {
